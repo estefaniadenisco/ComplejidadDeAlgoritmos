@@ -1,0 +1,70 @@
+//En java la sumaParesN (iterativo)
+
+public class SumaParesNIterativo{
+	public static void main(String[]args){
+		int limite=Integer.parseInt(args[0]);
+		int suma=0;
+		int i;
+		for(i=2;i<= limite;i+=2){
+			suma=suma+i;
+
+
+
+		}
+	
+		System.out.println("La suma es "+suma);
+	}
+
+
+}
+
+//En java la SumaParesN (recursivo)
+public class SumaParesNRecursivo{
+	public static void main(String[]args){
+		int limite=Integer.parseInt(args[0]);
+		System.out.println("La suma es " +sumaRecursiva(limite));
+
+	}
+
+	public static int sumaRecursiva(int n){
+		if (n==2){
+			return 2;
+		}
+
+		else{
+			if (n%2==0){
+				return n+sumaRecursiva(n-1);
+			}else{
+				return sumaRecursiva(n-1);
+
+			}
+		}
+
+
+
+	}
+
+
+
+
+
+}
+// En Python lasumaParesN
+
+int sumOfEvenNumbersIterative(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += 2 * i;
+    }
+    return sum;
+}
+
+// En Arduino laSumaParesN
+
+int sumOfEvenNumbersRecursive(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return 2 * n + sumOfEvenNumbersRecursive(n-1);
+}
+
